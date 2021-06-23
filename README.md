@@ -1,6 +1,6 @@
 # Udacity Full Stack javascript developer - Image Processing API
 
-This is the firt project of the Udacity Full Stack javascript developer course: Image Processing API.
+This is the first project of the Udacity Full Stack JavaScript Developer Nanodegree program: Image Processing API.
 
 It consists of these main elements:
 * 
