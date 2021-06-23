@@ -1,0 +1,10 @@
+# installed packages
+node_modules
+
+# compiled outputs
+dist
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+
