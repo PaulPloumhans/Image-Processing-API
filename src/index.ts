@@ -9,8 +9,8 @@ app.listen(port, () => {
     console.log(`Server is now listening at http://localhost:${port}`);
 });
 
-const testJasmine = (a: number, b: number): number => {
-    return a + b;
-};
+// const testJasmine = (a: number, b: number): number => {
+//     return a + b;
+// };
 
-export default testJasmine;
+export default app;
