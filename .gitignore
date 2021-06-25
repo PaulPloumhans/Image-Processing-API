@@ -2,7 +2,7 @@
 node_modules
 
 # compiled outputs
-dist
+build
 
 # IDE - VSCode
 .vscode/*

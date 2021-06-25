@@ -4,7 +4,7 @@
       "prettier"
     ],
     "extends": [
-      "eslint:recommended",
+      "plugin:@typescript-eslint/recommended", // Uses the recommended rules from the @typescript-eslint/eslint-plugin
       "prettier"
     ],
     "rules": {
@@ -13,8 +13,10 @@
       "no-var": "error",
       "prefer-const": "error"
     },
+    "parser": "@typescript-eslint/parser", // Specifies the ESLint parser
     "parserOptions": {
-      "ecmaVersion": 2017
+      "ecmaVersion": 2017,
+      "sourceType": "module" // Allows for the use of imports
     },
     "env": {
       "node": true,
