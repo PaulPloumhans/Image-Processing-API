@@ -25,11 +25,9 @@ Key points:
 The required packages can be installed using
 `npm install`
 
-## Installation
-The required packages can be installed using
-`npm install`
-
-
+## Building
+To build this application use
+`npm run build`
 
 ## Testing
 A total of six test can be run with
