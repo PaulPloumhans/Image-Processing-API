@@ -4,7 +4,7 @@ import { existsSync, mkdirSync } from 'fs';
 import path from 'path';
 
 const imagesInPath = 'images';
-const imagesOutRootPath = 'thumbnails';
+const imagesOutPath = 'thumbnails';
 
 const resize = async (
     fileName: string,
@@ -13,15 +13,15 @@ const resize = async (
 ): Promise<string> => {
     const inputFile = path.join(imagesInPath, fileName + '.jpg');
     const outputFile = path.join(
-        imagesOutRootPath,
+        imagesOutPath,
         fileName + '_' + width + '_' + height + '.jpg'
     );
     let ret = '';
     // check if imagesOutRootPath is there; if not, create it
-    if (existsSync(imagesOutRootPath) !== true) {
-        console.log(`Creating folder ${imagesOutRootPath}`);
-        if (mkdirSync(imagesOutRootPath) !== undefined) {
-            ret = `Cannot create folder ${imagesOutRootPath}`;
+    if (existsSync(imagesOutPath) !== true) {
+        console.log(`Creating folder ${imagesOutPath}`);
+        if (mkdirSync(imagesOutPath) !== undefined) {
+            ret = `Cannot create folder ${imagesOutPath}`;
             return ret;
         }
     }
@@ -45,3 +45,5 @@ const callResize = async () => {
 };
 
 callResize();
+
+export { imagesInPath, imagesOutPath, resize };
