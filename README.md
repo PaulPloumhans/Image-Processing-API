@@ -17,7 +17,7 @@ Key points:
 * Uses Express as web server
 * Uses Sharp for image manipulations
 * Uses Jasmine for unit tests
-* Development done with Typescript to reduce errors
+* Development done with TypeScript to reduce errors
 
 # Deployment
 
@@ -72,5 +72,5 @@ The main folders are:
   * `src/utilities` contains the utility to resize images using disk caching to avoid re-doing the same resizing on a given file
   * `src/index.ts` containt the code that starts the express server
 * `images` contains images accessible to the API
-* `build` contains the Typescript files transpiled to javascript
+* `build` contains the javascript files transpiled from TypeScript
 * `spec`contains a support file for tests
