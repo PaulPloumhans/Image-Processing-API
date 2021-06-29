@@ -25,6 +25,12 @@ Key points:
 The required packages can be installed using
 `npm install`
 
+## Installation
+The required packages can be installed using
+`npm install`
+
+
+
 ## Testing
 A total of six test can be run with
 `npm run jasmine`
