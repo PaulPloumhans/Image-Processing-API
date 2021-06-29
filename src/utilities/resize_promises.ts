@@ -1,17 +1,16 @@
 import sharp from 'sharp';
-import { promises as fsPromises } from 'fs';
 import { existsSync, mkdirSync } from 'fs';
 import path from 'path';
-
-const imagesInPath = 'images';
-const imagesOutPath = 'thumbnails';
 
 const resize = async (
     fileName: string,
     width: number,
-    height: number
+    height: number,
+    imagesInPath: string,
+    imagesOutPath: string
 ): Promise<string> => {
     const inputFile = path.join(imagesInPath, fileName + '.jpg');
+    // buid name of output file based on input file and desired resolution
     const outputFile = path.join(
         imagesOutPath,
         fileName + '_' + width + '_' + height + '.jpg'
@@ -21,19 +20,23 @@ const resize = async (
         if (existsSync(imagesOutPath) !== true) {
             console.log(`Creating folder ${imagesOutPath}`);
             if (mkdirSync(imagesOutPath) !== undefined) {
-                reject(new Error(`Cannot create folder ${imagesOutPath}`));
+                reject(
+                    new Error(`Cannot create output folder ${imagesOutPath}`)
+                );
             }
         }
-        // check if outputFile is there; if yes, return immediately
+        // check if outputFile is on disk
         if (existsSync(outputFile)) {
+            // if yes, return outputFile immediately
             console.log(`File ${outputFile} is already present`);
             resolve(outputFile);
         } else {
+            // if no, resize, save to disk, and return outputFile
             try {
                 sharp(inputFile)
                     .resize(width, height)
                     .toFile(outputFile)
-                    .then((res) => resolve(outputFile))
+                    .then(() => resolve(outputFile))
                     .catch((err) => reject(err));
             } catch (err) {
                 reject(err);
@@ -42,8 +45,9 @@ const resize = async (
     });
 };
 
-resize('halfdome', 250, 250)
-    .then((res) => console.log(res))
-    .catch((err) => console.error(err.message));
+// usage example
+// resize('halfdome', 250, 250, 'images', 'thumbnails')
+//     .then((res) => console.log(res))
+//     .catch((err) => console.error(err.message));
 
-export { imagesInPath, imagesOutPath, resize };
+export default resize;
