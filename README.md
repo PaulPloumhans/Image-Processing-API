@@ -66,8 +66,8 @@ resize('halfdome', 300, 300, 'images', 'thumbnails')
 # Folder structure
 
 The main folders are:
-* src contains all the source files (in Typescript)
-** src/routes contains the API capabilities for the different routes
-** src/tests contains the tests
-** src/utilities contains the utility to resize images using disk caching to avoid re-doing the same resizing on a given file
-** src/index.ts starts the express server
+* `src` contains all the source files (in Typescript)
+  * `src/routes` contains the API capabilities for the different routes
+  * src/tests contains the tests
+  * src/utilities contains the utility to resize images using disk caching to avoid re-doing the same resizing on a given file
+  * src/index.ts containt the code that starts the express server
