@@ -71,3 +71,6 @@ The main folders are:
   * `src/tests` contains the tests
   * `src/utilities` contains the utility to resize images using disk caching to avoid re-doing the same resizing on a given file
   * `src/index.ts` containt the code that starts the express server
+* `images` contains images accessible to the API
+* `build` contains the Typescript files transpiled to javascript
+* `spec`contains a support file for tests
