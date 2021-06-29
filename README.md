@@ -56,9 +56,9 @@ in a file named `halfdome_300_300.jpg`.
 
 ## Module resize_premises
 
-The resizing capabilities are available through a module that is in file `src/utilities/resize_promises.ts`. Its usage is like so:
+The resizing capabilities (with caching) are available through a module that is in file `src/utilities/resize_promises.ts`. Its usage is like so:
 ```
-resize('halfdome', 250, 250, 'images', 'thumbnails')
+resize('halfdome', 300, 300, 'images', 'thumbnails')
     .then((res) => console.log(res)) // displays the filename of the resized file
     .catch((err) => console.error(err.message)); // displays the error message
 ```
