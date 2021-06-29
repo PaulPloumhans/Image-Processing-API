@@ -6,7 +6,7 @@ It consists in an Express server that exposes an API to resize JPEG images. If t
 resolution, a cached copy of the resized image is served from the second time onwards.
 
 In order for the API to access them, the images need to be in folder
-`images`. The resized images will be in the folder `thumbnails`, with a name that uniquely identifies the original image and the
+`images`. The resized images will be in the folder `thumbnails` (which will be created automatically the first time it is used), with a name that uniquely identifies the original image and the
 new resolution.
 
 More details are available at https://github.com/udacity/nd-0067-c1-building-a-server-project-starter.
