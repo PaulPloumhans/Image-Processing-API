@@ -38,6 +38,7 @@ The project depends on the following packages:
 * prettier
 * sharp
 * supertest
+See the file `package.json` for the exact versions used.
 
 ## Starting the server
 In order to start the server that exposes the API, type
