@@ -2,10 +2,10 @@
 
 This is the first project of the Udacity Full Stack JavaScript Developer Nanodegree program: Image Processing API.
 
-It consists in an Express server that exposes an API to resize JPEG images. If the same iamge is resized multiple times to the same
-resolution, a cached copy of the resized image is seved from the second time onwards.
+It consists in an Express server that exposes an API to resize JPEG images. If the same image is resized multiple times to the same
+resolution, a cached copy of the resized image is served from the second time onwards.
 
-In order to be accessed by the API, the images need to be in folder
+In order for the API to access them, the images need to be in folder
 `images`. The resized images will be in the folder `thumbnails`, with a name that uniquely identifies the original image and the
 new resolution.
 
