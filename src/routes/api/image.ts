@@ -6,7 +6,7 @@ const routes = express.Router();
 const imagesInPath = 'images';
 const imagesOutPath = 'thumbnails';
 
-routes.get('/', (req, res) => {
+routes.get('/', (req: express.Request, res: express.Response): void => {
     if (
         req.query.filename !== undefined &&
         req.query.width !== undefined &&
@@ -20,7 +20,7 @@ routes.get('/', (req, res) => {
             imagesInPath,
             imagesOutPath
         )
-            .then((resolve) => {
+            .then((resolve: string) => {
                 // resolve is a filename ending in .jpg, with a path relative to the project main folder
                 // so we need to build the full path to the file in order to use sendFile
                 const inputFileFullPath = path.join(

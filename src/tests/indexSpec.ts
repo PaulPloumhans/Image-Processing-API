@@ -8,10 +8,12 @@ describe('api endpoint testing', () => {
     it('test GET on /api', async () => {
         const res = await request.get('/api');
         expect(res.status).toEqual(200);
+        expect(res.text).toEqual('Main API route');
     });
     it('test GET on /api/image', async () => {
         const res = await request.get('/api/image');
         expect(res.status).toEqual(200);
+        expect(res.text).toEqual('Image route');
     });
 });
 
